@@ -6,6 +6,7 @@ Dedupify - duplicate file cleanup tool<br />
 RapidFetch - an alternative to autocomplete (before the windows 7 start menu search existed)<br />
 TLJExtractor - a tool to extract audio from the video game "The Longest Journey"<br />
 Breakout - a breakout-style 2D demo game made with DirectX SDK Apr 2007<br />
+Visual Basic 6.0 Utils - a variety of small utils I wrote for myself a long time ago and forgot about<br />
 
 I am releasing the source code in case somebody finds these tools useful.
 
