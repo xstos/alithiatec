@@ -1,0 +1,62 @@
+ideas
+disk monitor - history that tracks file changes like web history
+organizer that provides interface to harddisk using relationships like vista style
+
+upcoming features
+monitor for changes
+save DB on exit
+more robust search options
+instantly simultaneously search multiple areas of ur harddisk!
+picture slideshow
+link format
+c# open with
+harvester extension filtering
+force bind app to visual styles
+put shortcut keys in buttons or popups
+settings http://blogs.msdn.com/rprabhu/archive/2005/11/28/497792.aspx
+when shell triggered cause a postmessage and then check isolatedstorage for folders to add as a group
+migrate settings from old versions
+demo video
+rapidfetch features for website
+screenshots:
+- automatic shell integration
+- demo search
+
+resume
+
+paypal link
+website update
+download tracking
+advertising
+
+fix the tree class to have object keys, and use the fileinfo classes instead
+
+put to start menu/programs
+font setting
+window state
+
+address change
+Mailing address:
+PO Box 3000 Stn Main
+Shawinigan QC  G9N 7S6
+
+Fax number: 819-536-7078
+
+assembly signing is secret question random string
+
+helen cover letter
+
+panel back 225, 233, 236
+fore blue 49, 106, 197
+searchback 237, 241, 243
+
+no wildcards
+resizing bugs
+
+Start Menu
+Desktop
+My Documents
+My Music
+My Pictures
+Favorites
+History

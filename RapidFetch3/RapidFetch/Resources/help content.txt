@@ -1,0 +1,119 @@
+main
+Drag folders into the white space below folder groups, then type in a search query.
+RapidFetch is a file finding utility.  It is designed to search groups of folders from all over your hard disk simultaneously.
+
+Getting Started:
+
+Click a group you wish to search in the tree under "Folder Groups", or make your own group by dragging folders in from windows explorer.
+Type your query beside "Search For".
+Results will appear as you type letting you narrow down what you're looking for.
+
+Move your mouse around the window to see information in the "Info Pane" about the various program components.
+#####
+tree
+Drag folders into here, then type in a search query.
+Folder Groups
+
+Ways to add folders:
+1) click the "Add Folder" button
+2) drag and drop folders from your desktop or windows explorer window into here
+3) Right-click a node
+
+If a group doesn't exist one is created for you or you may create one yourself with "New Group"
+
+Ways to rename a group: 
+1) single click the group name and wait until the label becomes editable
+2) use the rename button
+3) right-click the label and select rename
+
+Ways to delete a group or folder:
+1) click the delete button
+2) press delete on the keyboard
+3) right-click the group or folder and select delete
+#####
++
+Adds a folder to the active/last-clicked group.  If no groups exist one is created.
+#####
+ren
+Renames the active/last clicked group.
+#####
+-
+Removes the selected group or folder.
+#####
+ref
+Refreshes the selected group or folder.
+#####
++sys
+A way to quickly add special windows folders such as My Documents, Desktop, Start Menu, etc.
+#####
+open
+Opens the highlighted files just as if you double clicked them in windows explorer.
+#####
+explore
+Opens the containing folder of the first highlighted file in the results.
+#####
+cut
+Cuts all the highlighted files to the clipboard.
+#####
+copy
+Copies all the highlighted files to the clipboard (to be pasted in windows explorer).
+#####
+copytxt
+Copies the selected results to the clipboard as a spreadsheet (tab-delimited).
+#####
+all
+Selects all files/folders.
+#####
+none
+Unselects all files/folders.
+#####
+fit
+Resizes all visible columns to fit their content.
+#####
+hide
+Hides RapidFetch to the system tray.
+#####
+data
+Double click an item or press enter to run it. Use scroll bar/arrow keys to navigate the results. Right click for more options.
+How to use the Search Results - you may either:
+
+- double click a file to open it
+- press enter to execute the currently highlighted file(s)
+- right click on the results or use the buttons for a list of more actions
+- right-drag selected files into windows explorer
+#####
+search
+Separate terms or phrases with spaces. Phrases are multiple terms enclosed in double quotes ("). Spaces in phrases matter.
+How to search for files:
+
+1) Click the folder group you wish to search.
+2) Then type a search query in this box. Search terms are separated by spaces and double quotes instruct RapidFetch to search for phrases. 
+
+For example: <ball bat "baseball glove"> will search for folders or filenames containing "ball" and "bat" and "baseball glove".
+
+You may also search for partial words such as "love" which will return all results containing glove as well. 
+
+To search for specific types of files just type their extension as well i.e.: <biology report pdf> will return files containing "biology" and "report" and "pdf".
+
+No wildcards are supported yet i.e. <*.jpg>.
+#####
+cache
+Shows what RapidFetch has indexed so far.
+#####
+row
+Allows highlighting either entire rows or individual cells in the results table.
+#####
+shell
+Enables right-click integration into windows explorer.
+#####
+setup
+Creates desktop/start menu/quicklaunch shortcuts.
+#####
+info
+Shows additional information.
+#####
+preview
+Pops up a window that displays a preview of a selected image file.
+#####
+demo
+Adds the demo folders shown when RapidFetch was first-run.

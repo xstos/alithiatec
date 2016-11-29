@@ -1,0 +1,110 @@
+Unlocking the Secrets of the ShellDocVwCtl
+By John Percival
+
+Go to page: Prev  1  2  3  
+
+NameSpace
+
+Function NameSpace(vDir) As Folder
+
+This function returns a Folder from a string of the path. This is, as for as I know, the only way to create a folder object for a certain directory. For example:
+
+Set myfolder = ShellControl.NameSpace("C:")
+
+Folder Object
+
+This is the object that explorer uses when referring to folders. One of the most useful functions is the ParseName function:
+
+Function ParseName(bName As String) As FolderItem
+
+This returns a FolderItem object, which we can use to get several properties about the Item. For example:
+
+Set myfolder = ShellControl.NameSpace("C:")
+Set startfile = myfolder.ParseName("autoexec.bat")
+
+You can also enumerate all files and sub-directories using the Items collection. For example:
+
+Dim myShell As New shell
+Dim Fold As Folder
+Dim FoldItem As FolderItem
+Set Fold = myShell.NameSpace("C:")
+For Each FoldItem In Fold.Items
+List1.AddItem FoldItem.Name
+Next
+
+FolderItem Object
+
+With this object we can use the IsFolder and GetFolder functions to return a folder object if the item is a folder. For example:
+
+Dim myshell As New Shell
+Dim fold As Folder
+Set fold=myshell.NameSpace("C:")
+If fold.ParseName("windows").IsFolder Then _
+MsgBox ("C:windows is a folder")
+
+We can use the IsLink and GetLink functions to return a ShellLink object, which we will look at later, if the item is a link. We can use the ModifyDate, Size, Name and Path functions to find out more information about the file. There is also the Verbs collection. 'Verbs' are the things that you can do to files, eg. Open, Delete, Rename and Properties to name the default ones. These can be executed by using the invoke verb Function:
+
+Sub InvokeVerb([vVerb])
+
+vVerb can either be a string containing the name of the verb(eg. "&Open" - don't forget the shortcut key), or an index.
+
+Now that we know all that, we can try out some examples:
+
+Dim myshell As New Shell
+myshell.NameSpace("C:").ParseName("autoexec.bat").InvokeVerb("P&roperties")
+
+This shows properties for c:autoexec.bat
+
+myshell.NameSpace("C:").ParseName("windows").InvokeVerb("&Open")
+
+This opens the c:windows directory
+
+Debug.Print myshell.NameSpace("C:").ParseName("autoexec.bat").ModifiedDate
+
+This returns the date that c:autoexec.bat was last modified
+
+To enumerate all possible verbs, you can do the following:
+
+Dim myShell As New shell
+Dim Fold As Folder
+Dim FoldItem As FolderItem
+Dim myVerb As FolderItemVerb
+Set Fold = myShell.NameSpace("C:")
+Set FoldItem = Fold.ParseName("autoexec.bat")
+For Each myVerb In FoldItem.Verbs
+List1.AddItem myVerb.Name
+Next
+
+ShellLinkObject
+
+This object allows you to access and modify existing links (*.lnk and *.pif). A reference to a ShellLinkObject is returned by the GetLink function of the FolderItem object. You can change the Path (what to run), WorkingDirectory, Arguments and Description properties. You can also access the ShowCommand property. This seems to be 1 for a Normal Window, 3 for opening in a maximised window and 7 for a minimised window.
+
+The Hotkey Property is more complicated. This lowest 8 bits are the ASCII code of the character (eg A=65). The 9th bit is whether Shift is selected. The 10th bit is Ctrl, and the 11th bit is Alt. So, to make a new HotKey:
+
+newhotkey=IIf(bAlt = True, 1024, 0) + _
+IIf(bCtrl = True, 512, 0) + IIf(bShift = True, _
+256, 0) + Asc(keychar)
+
+To get the char out of a hotkey:
+
+keychar=Chr$(hotkey And 255)
+
+To get Shift, Ctrl and Alt:
+
+bShift=(hotkey And 256)=256
+bCtrl=(hotkey And 512)=512
+bAlt=(hotkey And 1024)=1024
+
+Don't worry if that didn't all make sense. A little maths is needed to explain it, so just use the example I have given.
+
+GetIconLocation retrieves the index of the icon from the file. The index starts at 0 and goes up to however many icons there are, minus one. SetIconLocation allows you to set the file from which to get the icon, and the index within the file:
+
+Dim mylink As New ShellLinkObject
+mylink.SetIconLocation "c:windowssystempifmgr.dll",10
+' This selects the 11th icon in pifmgr.dll (some money)
+
+Don't forget that after you have made all the changes to save the link, using the Save method.
+
+Have a play around. There are lots of things that you can do with this library. If you discover something that you think that other programmers will find useful, send me an email.
+
+Note: There are some restrictions on distribution of the ShellDocVw.dll. Be careful that you don't breach any rules, etc. as you must distribute all of IE4 just to use this DLL. These functions do not work under IE 5 unfortunately.
