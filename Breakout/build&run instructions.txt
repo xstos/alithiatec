@@ -5,7 +5,7 @@ To build/play:
 2)
 open the solution and hit play 
 OR 
-run Release\BreakOut\BreakOut.exe
+run Source\BreakOut\BreakOut.exe
 
 Tools used to build:
 Microsoft DirectX SDK (April 2007) https://www.microsoft.com/en-us/download/details.aspx?id=23776
