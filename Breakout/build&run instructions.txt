@@ -1,0 +1,12 @@
+To build/play:
+
+1) run dxwebsetup.exe to get the SDK dependencies on your machine
+
+2)
+open the solution and hit play 
+OR 
+run Release\BreakOut\BreakOut.exe
+
+Tools used to build:
+Microsoft DirectX SDK (April 2007) https://www.microsoft.com/en-us/download/details.aspx?id=23776
+

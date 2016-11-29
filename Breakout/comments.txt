@@ -1,0 +1,45 @@
+==========================FEATURES=============================
+
+- polygon based actors independent of world coordinates to enable transformations of the shapes themselves (like matrix transforms in directx) with any desired shape (currently clockwise vertices=closed poly like the old Doom2 editors)
+
+- automatic polygon collisions for convex actors (still needs a bit of improvement to work at greater time increments)
+
+- multiple brick layouts in the levels\levels.csv file
+- The file structure is rudimentary and could be improved to contain different brick polygon definition shapes/colors/positions/behaviors/overlayed sprites
+
+- includes different point valued bricks in a few levels in the CSV file
+
+- no powerups but easy to implement with the current framework
+- the paddle can be scaled with a matrix transform or using the vector routines in the vector class
+- projectiles can be spawned when a brick dissappears with a downward velocity and then if the paddle overlaps the powerup something happens
+- a neat powerup would be a slight deflection to the ball controlled by the paddle position (like unreal's razorjack)
+
+- basic sound effects
+
+- i threw in some of my music compositions for atmosphere!
+
+- new assets can easily be incorporated by creating a 2D level editor to replace the CSV
+- by overlaying sprites on top of the polygons
+- by importing polygon structures created in more sophisticated apps
+
+===========================COMMENTS===================================
+- the sound sometimes crackles since the AudioVideoPlayback library is likely not meant for repetitive invocations by sound effects and sound clipping is occuring too, the music loader should be thrown in a separate thread too
+
+- the polygon deflection algorithm is imperfect as it assumes the projectile is impacting a smooth surface.
+- the collisions are also not as smooth as could be since the projectile should be advanced to the point of impact and then deflected and moved by the remaining distance for that time interval
+- currently it only predicts a future collision and then deflects immediately
+
+- the modules are not as loosely coupled as could be since more features are required to achieve this, so the stuff is hard coded for now...
+
+- there are provisions for multiple projectiles (balls/powerups or rockets to fire at the bricks) but the game is currently hard-coded for one ball. Adding more is easy as the decision loop can be enhanced to check the type ID of objects and determine their interactions and loop through them all
+
+===========================TODO=========================================
+- use directsound to fix the crackling
+- upgrade the polygon collider to account for irregular impact surfaces, thereby allowing funkier polygons
+
+=========================TIME SPENT===================================
+- I got caught up researching polygon collision methods and collision detection in more advanced games as I was curious how they did it so it's difficult to say how much time actually went into the final product... 
+- I timed the initial development times to create a basic working product and that was about 20 hrs but this included reading directX samples as a refresher and figuring out how to do sound, and making the vector/poly/point classes
+work right as well as different collision detection techinques for arbitrary polygons
+- I believe I could meet the requirements of a 7.5 hr dev time assuming there was a lot more hard-coding and less features. the most time went into the polygons, so if you assume rectangles only, the collisions are dead easy
+- I went overboard with this since I can reuse a lot of the stuff in other programs so it was worthwhile for me regardless...
