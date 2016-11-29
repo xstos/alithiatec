@@ -3,7 +3,9 @@
 Back in 2007 I wrote a few pieces of freeware.
 
 Dedupify - duplicate file cleanup tool
+
 RapidFetch - an alternative to autocomplete (before the windows 7 start menu search existed)
+
 TLJExtractor - a tool to extract audio from the video game "The Longest Journey"
 
 I am releasing the source code in case somebody finds these tools useful.
