@@ -90,10 +90,9 @@ namespace VPNKeepAlive
         {
             try
             {
-                PingReply reply = Util.Ping(IPAddress.Parse(mySettings.PingServer));
-                if (reply.Status != IPStatus.Success)
+                if (!Util.Ping(IPAddress.Parse(mySettings.PingServer)))
                 {
-                    Trace.WriteLine("Ping " + reply.Status + ", Attempting reconnect");
+                    Trace.WriteLine("Ping failed", "Attempting reconnect");
                     Reconnect();
                 }
             }

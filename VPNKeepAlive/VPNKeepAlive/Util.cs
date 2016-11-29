@@ -12,14 +12,22 @@ namespace VPNKeepAlive
 {
     public static class Util
     {
-        public static PingReply Ping(IPAddress address)
+        public static bool Ping(IPAddress address)
         {
             Ping pingSender = new Ping();
             PingOptions options = new PingOptions();
             int timeout = 120; 
             try
             {
-                return pingSender.Send(address, timeout, Encoding.ASCII.GetBytes("BADBEEFBADBEEFBADBEEFBADBEEFBADB"), options);
+                PingReply reply;
+                for (int i = 0; i < 4; i++)
+                {
+                    reply = pingSender.Send(address, timeout,Encoding.ASCII.GetBytes("BADBEEFBADBEEFBADBEEFBADBEEFBADB"), options);
+                    if (reply.Status == IPStatus.Success)
+                        return true;
+                    Trace.WriteLine("Ping status: "+reply.Status);
+                }
+                return false;
             }
             catch (Exception ee)
             {
