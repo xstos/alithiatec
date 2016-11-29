@@ -1,0 +1,12 @@
+[OPTIONS]
+REVISIONS=No
+LCID=0x409 0x0 0x0 ; English (United States)
+REPORT=Yes
+TITLE=ScholasticMaze Help
+HLP=help.hlp
+
+[FILES]
+help.rtf
+
+[WINDOWS]
+window1="ScholasticMaze Help",(100,102,800,600),4,(r14876671),(r12632256),f3; ScholasticMaze Help

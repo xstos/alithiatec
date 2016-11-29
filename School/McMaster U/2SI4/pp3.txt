@@ -1,0 +1,26 @@
+Timing Sort Algorithms - Programming Project #3
+Nov. 22, 2001.
+
+Abstract:
+
+The purpose of this project is to demonstrate the efficiencies of sorting algorithms by testing them under worst case scenarios.  The number of iterations used for each of the tests was 100.  Higher values could not be attempted because the program crashed with an unresolved error.
+
+The clock accuracy was 1000 ticks per second, but even at this rate, the processor of the test machine (1.3Ghz Athlon) seemed to be running too fast for reliable results.  The input data files were made as follows: insertion, bubble, and shaker sorts used decreasing integers, the quicksorts used pre-sorted data sets, and the shell sort used an alternating pattern of 5+i,1+i (i=0,1,...).
+
+Conclusion:
+
+value of n	algorithm performance
+		best sorts			worst sorts
+-------------------------------------------------------------------
+25		insertion, shell, and shaker 	qsort
+50		insertion, shaker		qsort
+75		insertion, shell, and shaker	qsort
+100		shell, and shaker		qsort
+200		shell, and shaker		insertion
+500		shaker				bubble sort
+1000		shell sort			bubble sort
+
+Group Duties:
+Tom T: insertion, recursive quicksort, iterative heap sort, shaker sort
+Yuen C: shell sort, qsort, bubble sort
+Chris C: Timing program, and analysis

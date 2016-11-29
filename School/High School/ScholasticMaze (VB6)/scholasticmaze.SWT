@@ -1,0 +1,171 @@
+[Setup Wizard Template]
+TemplateDate=2000/01/18 8:54:03 PM
+
+[Select Project and Options]
+txtProjFile=C:\ScholasticMaze\ScholasticMaze.vbp
+chkProjRebuild=0
+optBldSetup=True
+chkIncludeDEP=1
+optInternet=False
+optDEPOnly=False
+
+[Distribution Method]
+optFloppyTarg=False
+optSingleDirTarg=True
+optMultDirTarg=False
+
+[Single Directory]
+cboFloppyDrives=0
+cboFloppyDriveSize=0
+txtDirTarget=C:\crapola\
+
+[Internet Package]
+optRemoteSite=True
+optLocalSite=False
+txtLocalSite=
+
+[Data Access]
+chkUseJet=1
+chkUseODBC=0
+Isam0=
+
+[ActiveX Server Components]
+File1=
+
+[Confirm Dependencies]
+File1="C:\WINDOWS\SYSTEM\COMDLG32.OCX",True,32764
+File2="C:\WINDOWS\SYSTEM\COMCTL32.OCX",True,32764
+File3="C:\WINDOWS\SYSTEM\COMCT232.OCX",True,32764
+File4="C:\WINDOWS\SYSTEM\RICHTX32.OCX",True,32764
+File5="C:\WINDOWS\mplayer.exe",True,32764
+File6="C:\WINDOWS\SYSTEM\MSDXM.OCX",True,32764
+File7="C:\WINDOWS\SYSTEM\MCI32.OCX",True,32764
+File8=
+
+[Shared ActiveX Application]
+optDeployApplication=True
+optDeployShared=False
+optRemoteServer1=True
+optRemoteServer0=False
+
+[File Summary]
+File1="C:\WINDOWS\SYSTEM\MSVBVM50.dll",True,"$(WinSysPathSysFile)",$(DLLSelfRegister),False
+File2="C:\Program Files\DevStudio\VB\SETUPKIT\KITFIL32\SYS32\StdOle2.tlb",True,"$(WinSysPathSysFile)",$(TLBRegister),False
+File3="C:\Program Files\DevStudio\VB\SETUPKIT\KITFIL32\SYS32\OleAut32.dll",True,"$(WinSysPathSysFile)",$(DLLSelfRegister),False
+File4="C:\Program Files\DevStudio\VB\SETUPKIT\KITFIL32\SYS32\OlePro32.dll",True,"$(WinSysPathSysFile)",$(DLLSelfRegister),False
+File5="C:\Program Files\DevStudio\VB\SETUPKIT\KITFIL32\SYS32\AsycFilt.dll",True,"$(WinSysPathSysFile)",,False
+File6="C:\Program Files\DevStudio\VB\SETUPKIT\KITFIL32\SYS32\Ctl3d32.dll",True,"$(WinSysPathSysFile)",,False
+File7="C:\Program Files\DevStudio\VB\SETUPKIT\KITFIL32\SYS32\ComCat.dll",True,"$(WinSysPathSysFile)",$(DLLSelfRegister),False
+File8="C:\WINDOWS\SYSTEM\COMDLG32.OCX",True,"$(WinSysPath)",$(DLLSelfRegister),True
+File9="C:\WINDOWS\SYSTEM\COMCTL32.OCX",True,"$(WinSysPath)",$(DLLSelfRegister),True
+File10="C:\WINDOWS\SYSTEM\COMCT232.OCX",True,"$(WinSysPath)",$(DLLSelfRegister),True
+File11="C:\WINDOWS\SYSTEM\RICHTX32.OCX",True,"$(WinSysPath)",$(DLLSelfRegister),True
+File12="C:\WINDOWS\mplayer.exe",True,"$(AppPath)",,False
+File13="C:\WINDOWS\SYSTEM\MSDXM.OCX",True,"$(WinSysPath)",$(DLLSelfRegister),True
+File14="C:\WINDOWS\SYSTEM\MCI32.OCX",True,"$(WinSysPath)",$(DLLSelfRegister),True
+File15="C:\ScholasticMaze\ScholasticMaze.exe",True,"$(AppPath)",,False
+File16="C:\ScholasticMaze\ScholasticMaze.DEP",True,"$(AppPath)",,False
+File17="C:\ScholasticMaze\hof.1st",True,"$(AppPath)",,False
+File18="C:\ScholasticMaze\floor.bmp",True,"$(AppPath)",,False
+File19="C:\ScholasticMaze\health.bmp",True,"$(AppPath)",,False
+File20="C:\ScholasticMaze\monster.bmp",True,"$(AppPath)",,False
+File21="C:\ScholasticMaze\person.bmp",True,"$(AppPath)",,False
+File22="C:\ScholasticMaze\person2.bmp",True,"$(AppPath)",,False
+File23="C:\ScholasticMaze\person3.bmp",True,"$(AppPath)",,False
+File24="C:\ScholasticMaze\person4.bmp",True,"$(AppPath)",,False
+File25="C:\ScholasticMaze\qmark.bmp",True,"$(AppPath)",,False
+File26="C:\ScholasticMaze\stairs.bmp",True,"$(AppPath)",,False
+File27="C:\ScholasticMaze\title.bmp",True,"$(AppPath)",,False
+File28="C:\ScholasticMaze\up.bmp",True,"$(AppPath)",,False
+File29="C:\ScholasticMaze\wall.bmp",True,"$(AppPath)",,False
+File30="C:\ScholasticMaze\emptyhof.dat",True,"$(AppPath)",,False
+File31="C:\ScholasticMaze\hof.dat",True,"$(AppPath)",,False
+File32="C:\ScholasticMaze\m1a.dat",True,"$(AppPath)",,False
+File33="C:\ScholasticMaze\m1b.dat",True,"$(AppPath)",,False
+File34="C:\ScholasticMaze\m1c.dat",True,"$(AppPath)",,False
+File35="C:\ScholasticMaze\m2a.dat",True,"$(AppPath)",,False
+File36="C:\ScholasticMaze\m2b.dat",True,"$(AppPath)",,False
+File37="C:\ScholasticMaze\m2c.dat",True,"$(AppPath)",,False
+File38="C:\ScholasticMaze\m3a.dat",True,"$(AppPath)",,False
+File39="C:\ScholasticMaze\m3b.dat",True,"$(AppPath)",,False
+File40="C:\ScholasticMaze\m3c.dat",True,"$(AppPath)",,False
+File41="C:\ScholasticMaze\m4a.dat",True,"$(AppPath)",,False
+File42="C:\ScholasticMaze\m4b.dat",True,"$(AppPath)",,False
+File43="C:\ScholasticMaze\m4c.dat",True,"$(AppPath)",,False
+File44="C:\ScholasticMaze\m5a.dat",True,"$(AppPath)",,False
+File45="C:\ScholasticMaze\m5b.dat",True,"$(AppPath)",,False
+File46="C:\ScholasticMaze\m5c.dat",True,"$(AppPath)",,False
+File47="C:\ScholasticMaze\m6a.dat",True,"$(AppPath)",,False
+File48="C:\ScholasticMaze\m6b.dat",True,"$(AppPath)",,False
+File49="C:\ScholasticMaze\m6c.dat",True,"$(AppPath)",,False
+File50="C:\ScholasticMaze\help.GID",True,"$(AppPath)",,False
+File51="C:\ScholasticMaze\statusbar.gif",True,"$(AppPath)",,False
+File52="C:\ScholasticMaze\HELP.HLP",True,"$(AppPath)",,False
+File53="C:\ScholasticMaze\BOOKS01.ICO",True,"$(AppPath)",,False
+File54="C:\ScholasticMaze\azinhoth.jpg",True,"$(AppPath)",,False
+File55="C:\ScholasticMaze\bigcastle1.jpg",True,"$(AppPath)",,False
+File56="C:\ScholasticMaze\bosskeyimage.jpg",True,"$(AppPath)",,False
+File57="C:\ScholasticMaze\happycastle.jpg",True,"$(AppPath)",,False
+File58="C:\ScholasticMaze\m1.jpg",True,"$(AppPath)",,False
+File59="C:\ScholasticMaze\m10.jpg",True,"$(AppPath)",,False
+File60="C:\ScholasticMaze\m11.jpg",True,"$(AppPath)",,False
+File61="C:\ScholasticMaze\m12.jpg",True,"$(AppPath)",,False
+File62="C:\ScholasticMaze\m13.jpg",True,"$(AppPath)",,False
+File63="C:\ScholasticMaze\m14.jpg",True,"$(AppPath)",,False
+File64="C:\ScholasticMaze\m15.jpg",True,"$(AppPath)",,False
+File65="C:\ScholasticMaze\m16.jpg",True,"$(AppPath)",,False
+File66="C:\ScholasticMaze\m17.jpg",True,"$(AppPath)",,False
+File67="C:\ScholasticMaze\m18.jpg",True,"$(AppPath)",,False
+File68="C:\ScholasticMaze\m19.jpg",True,"$(AppPath)",,False
+File69="C:\ScholasticMaze\m2.jpg",True,"$(AppPath)",,False
+File70="C:\ScholasticMaze\m20.jpg",True,"$(AppPath)",,False
+File71="C:\ScholasticMaze\m21.jpg",True,"$(AppPath)",,False
+File72="C:\ScholasticMaze\m22.jpg",True,"$(AppPath)",,False
+File73="C:\ScholasticMaze\m3.jpg",True,"$(AppPath)",,False
+File74="C:\ScholasticMaze\m4.jpg",True,"$(AppPath)",,False
+File75="C:\ScholasticMaze\m5.jpg",True,"$(AppPath)",,False
+File76="C:\ScholasticMaze\m6.jpg",True,"$(AppPath)",,False
+File77="C:\ScholasticMaze\m7.jpg",True,"$(AppPath)",,False
+File78="C:\ScholasticMaze\m8.jpg",True,"$(AppPath)",,False
+File79="C:\ScholasticMaze\m9.jpg",True,"$(AppPath)",,False
+File80="C:\ScholasticMaze\mapback.jpg",True,"$(AppPath)",,False
+File81="C:\ScholasticMaze\m1.qid",True,"$(AppPath)",,False
+File82="C:\ScholasticMaze\m2.qid",True,"$(AppPath)",,False
+File83="C:\ScholasticMaze\m3.qid",True,"$(AppPath)",,False
+File84="C:\ScholasticMaze\m4.qid",True,"$(AppPath)",,False
+File85="C:\ScholasticMaze\m5.qid",True,"$(AppPath)",,False
+File86="C:\ScholasticMaze\m6.qid",True,"$(AppPath)",,False
+File87="C:\ScholasticMaze\ScholasticMaze.vbw",True,"$(AppPath)",,False
+File88="C:\ScholasticMaze\heart.avi",True,"$(AppPath)",,False
+File89="C:\ScholasticMaze\intro.avi",True,"$(AppPath)",,False
+File90="C:\ScholasticMaze\Form1.frx",True,"$(AppPath)",,False
+File91="C:\ScholasticMaze\Form2.frx",True,"$(AppPath)",,False
+File92="C:\ScholasticMaze\hof.frx",True,"$(AppPath)",,False
+File93="C:\ScholasticMaze\Form1.frm",True,"$(AppPath)",,False
+File94="C:\ScholasticMaze\Form2.frm",True,"$(AppPath)",,False
+File95="C:\ScholasticMaze\hof.frm",True,"$(AppPath)",,False
+File96="C:\ScholasticMaze\Group1.vbg",True,"$(AppPath)",,False
+File97="C:\ScholasticMaze\Module1.bas",True,"$(AppPath)",,False
+File98="C:\ScholasticMaze\ScholasticMaze.vbp",True,"$(AppPath)",,False
+File99="C:\ScholasticMaze\COUNTER.WAV",True,"$(AppPath)",,False
+File100="C:\ScholasticMaze\GURGLE.WAV",True,"$(AppPath)",,False
+File101="C:\ScholasticMaze\HEALTH.WAV",True,"$(AppPath)",,False
+File102="C:\ScholasticMaze\HITWALL.WAV",True,"$(AppPath)",,False
+File103="C:\ScholasticMaze\MONSTER.WAV",True,"$(AppPath)",,False
+File104="C:\ScholasticMaze\MONSTER2.WAV",True,"$(AppPath)",,False
+File105="C:\ScholasticMaze\PAIN.WAV",True,"$(AppPath)",,False
+File106="C:\ScholasticMaze\pain2.wav",True,"$(AppPath)",,False
+File107="C:\ScholasticMaze\pain3.wav",True,"$(AppPath)",,False
+File108="C:\ScholasticMaze\pain4.wav",True,"$(AppPath)",,False
+File109="C:\ScholasticMaze\pain5.wav",True,"$(AppPath)",,False
+File110="C:\ScholasticMaze\slain.wav",True,"$(AppPath)",,False
+File111="C:\ScholasticMaze\win.wav",True,"$(AppPath)",,False
+File112="C:\ScholasticMaze\win1.wav",True,"$(AppPath)",,False
+File113="C:\ScholasticMaze\win2.wav",True,"$(AppPath)",,False
+File114="C:\ScholasticMaze\win3.wav",True,"$(AppPath)",,False
+File115="C:\ScholasticMaze\win4.wav",True,"$(AppPath)",,False
+File116="C:\ScholasticMaze\win5.wav",True,"$(AppPath)",,False
+File117="C:\WINDOWS\SYSTEM\RICHTX32.oca",True,"$(AppPath)",,False
+File118="C:\WINDOWS\SYSTEM\COMCTL32.oca",True,"$(AppPath)",,False
+File119="C:\WINDOWS\SYSTEM\COMDLG32.oca",True,"$(AppPath)",,False
+File120="C:\WINDOWS\SYSTEM\COMCT232.oca",True,"$(AppPath)",,False
