@@ -1,0 +1,125 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%@ Register Src="GoogleSiteSearch.ascx" TagName="GoogleSiteSearch" TagPrefix="uc3" %>
+<%@ Register Src="AdSense.ascx" TagName="AdSense" TagPrefix="uc2" %>
+<%@ Register Src="GoogleAnalytics.ascx" TagName="GoogleAnalytics" TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>AlithiaTec Consulting</title>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <meta name="description" content="Presenting: RapidFetch - a speedy desktop search utility and DeDupify - a duplicate file finder. Both are free!" />
+    <meta name="keywords" content="alithiatec,consulting,rapidfetch,dedupify,duplicate,file,finder,app,application,launcher,desktop,clutter,launch,search,locator,indexer,searcher,redundant,multiple,redundancy,same,twin,alike,similar,rapid,fetch,de,dupify" />
+</head>
+<body style="text-align: left;">
+    <form id="form1" runat="server">
+        <table style="width: 100%; border-bottom: #00008b 1px solid;" border="0" cellpadding="0"
+            cellspacing="0" class="zero" align="center">
+            <tr>
+                <td colspan="1">
+                    <uc3:GoogleSiteSearch ID="GoogleSiteSearch1" runat="server" />
+                    
+                </td>
+                <td colspan="1" style="text-align: center">
+                    <uc2:AdSense ID="AdSense" runat="server" />
+                </td>
+            </tr>
+        </table>
+        <table style="width: 100%; height: 100%" border="0" cellpadding="0" cellspacing="0"
+            class="zero">
+            <tr>
+                <td valign="top" style="text-align: center">
+                    <table style="width: 100%; background-image: url(images/ac_bg.png); background-repeat: repeat-x;"
+                        border="0" cellpadding="0" cellspacing="0" class="zero">
+                        <tr>
+                            <td colspan="1" class="zero" style="height: 64px;">
+                                <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal"
+                                    StaticDisplayLevels="2" MaximumDynamicDisplayLevels="5" BackColor="Transparent"
+                                    ForeColor="White" OnMenuItemClick="Menu1_MenuItemClick" StaticEnableDefaultPopOutImage="False"
+                                    EnableTheming="True" StaticSubMenuIndent="0px" OnLoad="Menu1_Load" CssClass="navmenu">
+                                    <DynamicHoverStyle Font-Bold="False" Font-Underline="True" ForeColor="#316AC5" BackColor="White"
+                                        BorderColor="Silver" BorderStyle="Solid" BorderWidth="1px" />
+                                    <StaticSelectedStyle Font-Bold="True" BackColor="White" ForeColor="#316AC5" BorderColor="Silver"
+                                        BorderStyle="Solid" BorderWidth="1px" Height="2em" HorizontalPadding="10px" />
+                                    <StaticHoverStyle Font-Bold="True" Font-Underline="True" BorderColor="Silver" BorderStyle="Solid"
+                                        BorderWidth="1px" BackColor="White" ForeColor="#316AC5" />
+                                    <StaticMenuItemStyle BackColor="Transparent" Height="2em" HorizontalPadding="10px" />
+                                    <StaticMenuStyle BackColor="Transparent" Height="40px" />
+                                    <DynamicMenuStyle BackColor="Transparent" />
+                                    <DynamicSelectedStyle Font-Bold="True" ForeColor="#316AC5" BackColor="White" HorizontalPadding="30px"
+                                        BorderColor="Silver" Height="2em" BorderStyle="Solid" BorderWidth="1px" />
+                                    <DynamicMenuItemStyle BackColor="#162F56" Height="2em" HorizontalPadding="0.5em"
+                                        BorderColor="Silver" BorderStyle="Solid" BorderWidth="1px" ForeColor="White"
+                                        ItemSpacing="0px" VerticalPadding="0.5em" />
+                                </asp:Menu>
+                            </td>
+                            <td colspan="1" class="zero" style="height: 64px;">
+                                <asp:Image ID="Image1" runat="server" ImageUrl="~/images/ac.png" BorderWidth="0px"
+                                    CssClass="ac" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="zero" colspan="2">
+                                <asp:SiteMapPath ID="SiteMapPath1" runat="server" RenderCurrentNodeAsLink="True">
+                                </asp:SiteMapPath>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td align="center">
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td style="background-image: url(images/images/tl.png); width: 19px; background-repeat: no-repeat;
+                                            height: 19px;">
+                                        </td>
+                                        <td style="background-image: url(images/images/tm.png); background-repeat: repeat-x;">
+                                        </td>
+                                        <td style="background-image: url(images/images/tr.png); width: 24px; background-repeat: no-repeat;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-image: url(images/images/ml.png); background-repeat: repeat-y;
+                                            height: 229px;">
+                                        </td>
+                                        <td align="left">
+                                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                            </asp:ContentPlaceHolder>
+                                        </td>
+                                        <td style="background-image: url(images/images/mr.png); background-repeat: repeat-y;
+                                            height: 229px;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-image: url(images/images/bl.png); background-repeat: no-repeat;
+                                            height: 24px">
+                                        </td>
+                                        <td style="background-image: url(images/images/bm.png); background-repeat: repeat-x;">
+                                        </td>
+                                        <td style="background-image: url(images/images/br.png); background-repeat: no-repeat;">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td valign="bottom" style="vertical-align: bottom; text-align: center;">
+                    &nbsp;<br />
+                    Copyright © 2006–2007 AlithiaTec. All rights reserved.<br />
+                    Site design: AlithiaTec Consulting<br />
+                    <a href="http://www.facebook.com/">Facebook me!</a>
+                    </td>
+                    
+            </tr>
+        </table>
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+        <uc1:GoogleAnalytics ID="GoogleAnalytics1" runat="server" />
+    </form>
+</body>
+</html>

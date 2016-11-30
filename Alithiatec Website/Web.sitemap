@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode title="Home" url="Default.aspx">
+    <siteMapNode title="Products" url="Products.aspx">
+      <siteMapNode title="RapidFetch" url="RapidFetch.aspx">
+        <!--<siteMapNode title="RapidFetch Help" url="RapidFetchHelp.aspx">
+        </siteMapNode>-->
+      </siteMapNode>
+      <siteMapNode title="DeDupify" url="DeDupify.aspx">
+      </siteMapNode>
+      <siteMapNode title="Utilities" url="Utilities.aspx" />
+    </siteMapNode>
+    <siteMapNode title="Portfolio" url="Portfolio.aspx">
+      <siteMapNode title="Atomic Energy" url="AECL.aspx" />
+      <siteMapNode title="Resume" url="Resume.aspx" />
+      <siteMapNode title="Capstone Design Project" url="IBMRobot.aspx" />
+      <siteMapNode title="Music" url="MyMusic.aspx" />
+      
+    </siteMapNode>
+    <siteMapNode title="Contact" url="Contact.aspx">
+      <siteMapNode title="Submit a bug" url="Bugs.aspx" />
+      <siteMapNode title="Feedback" url="Feedback.aspx" />
+      <siteMapNode title="Via FaceBook" url="http://www.facebook.com/" />
+    </siteMapNode>
+    <siteMapNode title="Blog" url="blog/" />
+    <siteMapNode title="SiteMap" url="SiteMap.aspx" />
+    <siteMapNode title="Useful Links" url="CoolStuff.aspx" />
+    <!--<siteMapNode title="About" url="About.aspx"/>-->
+  </siteMapNode>
+</siteMap>
