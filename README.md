@@ -1,7 +1,4 @@
 # alithiatec
-
-Back in 2007 I wrote a few pieces of freeware.
-
 [DeDupify](DeDupify) - duplicate file cleanup tool<br />
 [RapidFetch](RapidFetch3) - an alternative to autocomplete (before the windows 7 start menu search existed)<br/>
 [FolderPortal](FolderPortal) - allows you to add an easy-to-access list of folders to the system tray<br/>
@@ -16,7 +13,3 @@ Back in 2007 I wrote a few pieces of freeware.
 [ScholasticMaze](School/High School/ScholasticMaze (VB6)) - A video game project I made in high school using VB6.<br/>
 [School/McMaster U/2SI4](School/McMaster U/2SI4) - Some C programming assignments from university.<br/>
 [School/McMaster U/3E/Haskell](School/McMaster U/3E/Haskell) - Some Haskell snippets.<br/>
-
-I am releasing the source code in case somebody finds these tools useful.
-
-Cheers, Chris C.
