@@ -1,4 +1,6 @@
 # alithiatec
+Chris C's source code diary:
+
 [DeDupify](DeDupify) - duplicate file cleanup tool<br />
 [RapidFetch](RapidFetch3) - an alternative to autocomplete (before the windows 7 start menu search existed)<br/>
 [FolderPortal](FolderPortal) - allows you to add an easy-to-access list of folders to the system tray<br/>
