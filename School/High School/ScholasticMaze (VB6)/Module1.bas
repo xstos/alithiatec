@@ -74,5 +74,7 @@ End Sub
 
 
 Public Sub main()
+ChDrive App.Path
+ChDir App.Path
 Form1.Show
 End Sub

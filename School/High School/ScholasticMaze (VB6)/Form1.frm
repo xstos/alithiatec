@@ -608,7 +608,7 @@ Private Sub Form_Load()
 'ChDir "c:\scholasticmaze"
 CommonDialog1.HelpFile = CurDir + "\help.hlp"
 CommonDialog1.HelpCommand = cdlHelpIndex
-cdaudio = True
+cdaudio = False
 Label1.Caption = "00"
 musicmenu.Enabled = False
 ' If we're already running, then quit
@@ -631,7 +631,7 @@ currentname$ = "Sausage"
 Text1.Text = currentname$
 'If CurDir = "C:\Program Files\DevStudio\VB" Then
 'End If
-On Error Resume Next
+On Error GoTo 0
 Animation1.Open (CurDir + "\heart.avi")
 OLE1.CreateEmbed CurDir + "\intro.avi"
 OLE1.Width = Screen.TwipsPerPixelX * 640
@@ -684,7 +684,7 @@ End Sub
 Private Sub gameplaymenu_Click()
 If OLE1.Visible = True Then
 OLE1.Close
-OLE1.Visible = False
+'OLE1.Visible = False
 Form1.BackColor = vbApplicationWorkspace
 End If
 Frame1.Visible = True
@@ -697,7 +697,7 @@ End Sub
 
 Private Sub OLE1_Updated(Code As Integer)
 If Code = 2 Then
-OLE1.Visible = False
+'OLE1.Visible = False
 Form1.BackColor = vbApplicationWorkspace
 End If
 End Sub
@@ -798,7 +798,7 @@ End Sub
 Private Sub newmenu_Click()
 If OLE1.Visible = True Then
 OLE1.Close
-OLE1.Visible = False
+'OLE1.Visible = False
 Form1.BackColor = vbApplicationWorkspace
 End If
 newmenu.Enabled = False
@@ -1440,7 +1440,7 @@ Private Sub aboutmenu_Click()
 Dim a%
 If OLE1.Visible = True Then
 OLE1.Close
-OLE1.Visible = False
+'OLE1.Visible = False
 Form1.BackColor = vbApplicationWorkspace
 End If
 a% = MsgBox("   ScholasticMaze version 1.0" + Chr(vbKeyReturn) + "by Andrew Kittmer, Avery Yuen," + Chr(vbKeyReturn) + "      and Chris Christodoulou", vbExclamation, "About this program...")
@@ -1451,7 +1451,7 @@ Dim totalsecs!, numhours%, nummins%, numseconds&
 Dim a%, b%, c%
 If OLE1.Visible = True Then
 OLE1.Close
-OLE1.Visible = False
+'OLE1.Visible = False
 Form1.BackColor = vbApplicationWorkspace
 End If
 Form2.Show
@@ -1470,7 +1470,7 @@ End Sub
 Private Sub instructionsmenu_Click()
 If OLE1.Visible = True Then
 OLE1.Close
-OLE1.Visible = False
+'OLE1.Visible = False
 Form1.BackColor = vbApplicationWorkspace
 End If
 CommonDialog1.ShowHelp
@@ -1520,7 +1520,7 @@ End Sub
 Private Sub viewhalloffamemenu_Click()
 If OLE1.Visible = True Then
 OLE1.Close
-OLE1.Visible = False
+'OLE1.Visible = False
 Form1.BackColor = vbApplicationWorkspace
 End If
 hof.Show
