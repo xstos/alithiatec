@@ -2,6 +2,7 @@ VERSION 5.00
 Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
 Object = "{6B7E6392-850A-101B-AFC0-4210102A8DA7}#1.3#0"; "COMCTL32.OCX"
 Object = "{FE0065C0-1B7B-11CF-9D53-00AA003C9CB6}#1.1#0"; "COMCT232.OCX"
+Object = "{C1A8AF28-1257-101B-8FB0-0020AF039CA3}#1.1#0"; "MCI32.OCX"
 Begin VB.Form Form1 
    AutoRedraw      =   -1  'True
    BackColor       =   &H00000000&
@@ -19,6 +20,19 @@ Begin VB.Form Form1
    ScaleWidth      =   10515
    StartUpPosition =   2  'CenterScreen
    Visible         =   0   'False
+   Begin MCI.MMControl MMControl1 
+      Height          =   330
+      Left            =   720
+      TabIndex        =   29
+      Top             =   7920
+      Visible         =   0   'False
+      Width           =   3540
+      _ExtentX        =   6244
+      _ExtentY        =   582
+      _Version        =   393216
+      DeviceType      =   ""
+      FileName        =   ""
+   End
    Begin MSComDlg.CommonDialog CommonDialog1 
       Left            =   2220
       Top             =   1140
@@ -323,7 +337,7 @@ Begin VB.Form Form1
                Name            =   "Arial Black"
                Size            =   10.5
                Charset         =   0
-               Weight          =   400
+               Weight          =   900
                Underline       =   0   'False
                Italic          =   0   'False
                Strikethrough   =   0   'False
@@ -342,7 +356,7 @@ Begin VB.Form Form1
                Name            =   "Arial Black"
                Size            =   10.5
                Charset         =   0
-               Weight          =   400
+               Weight          =   900
                Underline       =   0   'False
                Italic          =   0   'False
                Strikethrough   =   0   'False
@@ -404,9 +418,8 @@ Begin VB.Form Form1
       Enabled         =   0   'False
       Height          =   5676
       Left            =   456
-      OleObjectBlob   =   "Form1.frx":5F6D
       OLETypeAllowed  =   1  'Embedded
-      SourceDoc       =   "C:\ScholasticMaze\intro.avi"
+      SourceDoc       =   "intro.avi"
       TabIndex        =   26
       Top             =   264
       Width           =   7716
@@ -601,7 +614,7 @@ Dim musrun As Boolean, optionclick As Boolean
 Dim playtime!
 Dim monsterpic(1 To 6) As Variant
 Dim difficulty As Byte
-
+Dim mp3tracks(2 To 18)
 
 
 Private Sub Form_Load()
@@ -617,12 +630,12 @@ If (App.PrevInstance = True) Then
 End If
 fastForwardSpeed = 5
 fCDLoaded = False
-If (SendMCIString("open cdaudio alias cd wait shareable", True) = False) Then
-    MsgBox ("CD being used or no CD loaded. CD audio disabled")
-    cdaudio = False
-End If
+'''If (SendMCIString("open cdaudio alias cd wait shareable", True) = False) Then
+'''    MsgBox ("CD being used or no CD loaded. CD audio disabled")
+'''    cdaudio = False
+'''End If
 Update
-SendMCIString "set cd time format tmsf wait", True
+'''SendMCIString "set cd time format tmsf wait", True
 'Timer1.Enabled = True
 Update
 Randomize
@@ -652,6 +665,14 @@ fPlaying = True
 SendMCIString "pause cd", True
 cmd = "play cd from " & track
 SendMCIString cmd, True
+Dim tracktoplay
+tracktoplay = App.Path & "music\track" & Format(trck, "00") & ".mp3"
+With MMControl1
+    .Command = "Stop"
+    .FileName = tracktoplay   ' Set the file to be played
+    .Command = "Open"                       ' Open the file
+    .Command = "Play"                       ' Play the file
+End With
 End If
 End Sub
 
@@ -1010,17 +1031,17 @@ ElseIf Not currentrightanswer% = key Then
     health% = health% - Int(((Rnd * 3) + 3) * levelnumber% * (difficulty + 1))
     ElseIf levelnumber% = 6 Then
     health% = health% - L6HEALTHLOSS - (10 * difficulty)
-    Label2.Caption = Trim(Str(health%)) + "/" + Trim(Str(maxhealth%))
-    Label2.Refresh
+    label2.Caption = Trim(Str(health%)) + "/" + Trim(Str(maxhealth%))
+    label2.Refresh
     End If
     If health% <= 0 Then
     pcd (4)
     health% = 0
     PlayWav ("slain.wav")
     a% = MsgBox(currentname$ + ", thanks for playing ScholasticMaze.  If you try harder next time, you might even beat level " + Trim(Str(levelnumber%)) + ".", vbOKOnly, "Monster Chow")
-    Label2.Caption = Trim(Str(health%)) + "/" + Trim(Str(maxhealth%))
+    label2.Caption = Trim(Str(health%)) + "/" + Trim(Str(maxhealth%))
     label7.Caption = Trim(Str(score%))
-    Label2.Refresh
+    label2.Refresh
     label7.Refresh
     checkhof
     sorthofvars
@@ -1038,7 +1059,7 @@ Form1.KeyPreview = False
 pcd (2)
 Exit Sub
     End If
-    Label2.Caption = Trim(Str(health%)) + "/" + Trim(Str(maxhealth%))
+    label2.Caption = Trim(Str(health%)) + "/" + Trim(Str(maxhealth%))
     rnum! = Rnd
     Select Case rnum!
     Case Is <= 0.2
@@ -1117,7 +1138,7 @@ health% = health% + Int(11 * Rnd + 15)
 If health% > maxhealth% Then
 health% = maxhealth%
 End If
-Label2.Caption = Trim(Str(health%)) + "/" + Trim(Str(maxhealth%))
+label2.Caption = Trim(Str(health%)) + "/" + Trim(Str(maxhealth%))
 tileimgindex(posr%, posc%) = floortex
 PlayWav ("health.wav")
 End If
@@ -1125,7 +1146,7 @@ End Sub
 Private Sub Form_KeyDown(KeyCode As Integer, Shift As Integer)
 updatepos
 label7.Caption = Trim(Str(score%))
-Label2.Caption = Trim(Str(health%)) + "/" + Trim(Str(maxhealth%))
+label2.Caption = Trim(Str(health%)) + "/" + Trim(Str(maxhealth%))
 If ingame = True And fightmonster = False Then '-----------------------------------
 Select Case KeyCode
 Case 37 'left
@@ -1257,7 +1278,7 @@ resetquestionsused
 levelnumber% = 0
 maxhealth% = 80
 health% = 80
-Label2.Caption = Trim(Str(health%)) + "/" + Trim(Str(maxhealth%))
+label2.Caption = Trim(Str(health%)) + "/" + Trim(Str(maxhealth%))
 label7.Caption = Trim(Str(score%))
 score% = 0
 nextmap
@@ -1324,10 +1345,10 @@ For a% = 1 To 6
 Set monsterpic(a%) = LoadPicture(CurDir + "\azinhoth.jpg")
 Next a%
 End If
-Label2.Caption = Trim(Str(health%)) + "/" + Trim(Str(maxhealth%))
+label2.Caption = Trim(Str(health%)) + "/" + Trim(Str(maxhealth%))
 label7.Caption = Trim(Str(score%))
 label7.Refresh
-Label2.Refresh
+label2.Refresh
 End Sub
 ' raw procedures raw procedures raw procedures raw procedures raw procedures raw procedures raw procedures
 Private Sub formatgamescreen()
@@ -1373,8 +1394,8 @@ Animation1.Width = 38 * twx%
 Animation1.Height = 38 * twy%
 Animation1.Left = twx%
 Animation1.Top = 3 * twy%
-Label2.Left = twx% * 145
-Label2.Top = twy% * 6
+label2.Left = twx% * 145
+label2.Top = twy% * 6
 Picture3.Left = 343 * twx%
 Picture3.Top = CInt((Picture1.ScaleHeight / 2) - (Picture3.Height / 2))
 label7.Left = 550 * twx%
