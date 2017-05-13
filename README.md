@@ -1,6 +1,7 @@
 # alithiatec
 Chris C's source code diary:
 
+[DaveScraper](DaveScraper) - Scrapes daily stock ticker numbers over a user-selectable date range
 [DeDupify](DeDupify) - duplicate file cleanup tool<br />
 [RapidFetch](RapidFetch3) - an alternative to autocomplete (before the windows 7 start menu search existed)<br/>
 [FolderPortal](FolderPortal) - allows you to add an easy-to-access list of folders to the system tray<br/>
