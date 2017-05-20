@@ -22,14 +22,14 @@ namespace AlithiaLib
         public static IEnumerable<RegistryKey> GetAllRegistryKeys()
         {
             var hives = new[] { Registry.ClassesRoot, Registry.CurrentConfig, Registry.CurrentUser, Registry.LocalMachine, Registry.Users, Registry.PerformanceData };
-            return hives.SelectMany(hive => hive.ChildrenRecusive());
+            return hives.SelectMany(hive => hive.Descendants());
         }
 
         public static IEnumerable<RegistryKey> Children(this RegistryKey key)
         {
             return key.GetSubKeyNames().Where(s => s != "Wow6432Node").Select(key.OpenSubKey);
         }
-        public static IEnumerable<RegistryKey> ChildrenRecusive(this RegistryKey key)
+        public static IEnumerable<RegistryKey> Descendants(this RegistryKey key)
         {
             Stack<RegistryKey> keys = new Stack<RegistryKey>();
             keys.Push(key);
