@@ -68,11 +68,13 @@
     <Compile Include="customProfessionalToolStripRenderer.cs" />
     <Compile Include="DictionaryList.cs" />
     <Compile Include="Errors.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="Forms.cs" />
     <Compile Include="InMemoryDB.cs" />
     <Compile Include="IO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reflect.cs" />
+    <Compile Include="RegistryValue.cs" />
     <Compile Include="Shell.cs" />
     <Compile Include="Str.cs" />
     <Compile Include="UserActivityHook.cs" />
