@@ -1,7 +1,7 @@
 # alithiatec
 Chris C's source code diary:
 
-[ListMerge](ListMerge/sample) - Merges excel workbooks together [code](ListMerge/ListMerge/Program.cs)<br/>
+[ListMerge](ListMerge/sample) - Merges excel workbooks together ([code])(ListMerge/ListMerge/Program.cs)<br/>
 [DaveScraper](DaveScraper) - Scrapes daily stock ticker numbers over a user-selectable date range<br/>
 [DeDupify](DeDupify) - duplicate file cleanup tool<br/>
 [RapidFetch](RapidFetch3) - an alternative to autocomplete (before the windows 7 start menu search existed)<br/>
