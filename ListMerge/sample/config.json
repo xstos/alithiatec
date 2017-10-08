@@ -1,1 +1,1 @@
-{"Destination":"finalMerged.xlsx","PrimaryKey":"Url","Inputs":["inputs\\alexa.xlsx","inputs\\social.xlsx","inputs\\whois.xlsx"]}
+{"Destination":"finalMerged.xlsx","Master":"URLMasterList.xlsx","PrimaryKey":"Url","Inputs":["inputs\\alexa.xlsx","inputs\\social.xlsx","inputs\\whois.xlsx"]}
