@@ -53,11 +53,17 @@ namespace ListMerge
                 var tables = inputs.ReadInputFilesToTables(excel, primaryKey);
                 var merged = tables.MergeInputs();
 
+                // delete rows containing whois email from blacklist
+                var WhoisEmailBlacklist = new List<string>() { "@web.com", "@uniregistry.com" };
+                var registrantEmailKey = "Registrant email";
+
                 merged.DeleteRows(row =>
                 {
                     var url = row[primaryKey];
-                    return set.Contains(url);
+                    var registrantEmail = (row[registrantEmailKey] ?? "").ToString();
+                    return set.Contains(url) || WhoisEmailBlacklist.Any(registrantEmail.Contains);
                 });
+                
                 merged.AcceptChanges();
                 var newUrls = merged.GetColumn<string>(primaryKey).ToSet();
 
