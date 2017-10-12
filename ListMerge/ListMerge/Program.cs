@@ -195,7 +195,7 @@ namespace ListMerge
         public static DataTable ToTable(this Workbook wb, string primaryKey)
         {
             var names = wb.Names().Select(n => n.Name);
-            var srcRange = names.Contains("MergeArea") ? wb.Names.Item("MergeArea").RefersToRange : wb.Sheets().First().UsedRange;
+            var srcRange = wb.Sheets().First().UsedRange;
             object[,] data = srcRange.ToArray(); //get named range MergeArea's values as 2D array
             var dt = data.ArrayToDataTable(wb.Name, primaryKey); //convert to datatable
             return dt;
